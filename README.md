@@ -1,6 +1,6 @@
 # front-matter-markd
 
-TODO: Write a description here
+This is a wrapper library that supports ![Markd](https://github.com/icyleaf/markd) in the Front-Matter format.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      front-matter-markd:
-       github: your-github-user/front-matter-markd
+       github: takanotume24/front-matter-markd
    ```
 
 2. Run `shards install`
@@ -20,7 +20,7 @@ TODO: Write a description here
 require "front-matter-markd"
 ```
 
-TODO: Write usage instructions here
+See ``spec/front-matter-markd_spec.cr``
 
 ## Development
 
@@ -28,7 +28,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/front-matter-markd/fork>)
+1. Fork it (<https://github.com/takanotume24/front-matter-markd/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+- [takanotume24](https://github.com/takanotume24) - creator and maintainer

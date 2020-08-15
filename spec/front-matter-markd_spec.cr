@@ -1,12 +1,30 @@
 require "./spec_helper"
 
-describe Front::Matter::Markd do
-  # TODO: Write tests
+# sample file from [jekyll/getting-started.md at master · jekyll/jekyll](https://github.com/jekyll/jekyll/blob/master/test/source/_tutorials/getting-started.md)
 
-  it "works" do
-    source = File.read Path["spec/sample.md"]
-    file = Front::Matter::Markd::File.new source 
-    pp file.yaml
-    # false.should eq(true)
+describe FrontMatterMarkd do
+  describe ".yaml(string : String)" do
+    it "get yaml" do
+      source = File.read Path["spec/sample.md"]
+      yaml = FrontMatterMarkd.yaml source
+      if yaml
+        yaml["title"].to_s.should eq("Getting Started")
+      end
+    end
+  end
+
+  describe ".to_html(string : String)" do
+    it "get html" do
+      source = File.read Path["spec/sample.md"]
+
+      html = FrontMatterMarkd.to_html source
+      html.should eq(
+        <<-HTML
+        <hr />
+        <hr />
+        <p>The first thing you need is a working installation of Ruby. Install from <a href="https://www.ruby-lang.org/en/documentation/installation/">the official website</a>.</p>\n
+        HTML
+      )
+    end
   end
 end
