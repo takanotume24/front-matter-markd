@@ -20,8 +20,6 @@ describe FrontMatterMarkd do
       html = FrontMatterMarkd.to_html source
       html.should eq(
         <<-HTML
-        <hr />
-        <hr />
         <p>The first thing you need is a working installation of Ruby. Install from <a href="https://www.ruby-lang.org/en/documentation/installation/">the official website</a>.</p>\n
         HTML
       )

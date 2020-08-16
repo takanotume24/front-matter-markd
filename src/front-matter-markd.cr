@@ -20,6 +20,7 @@ module FrontMatterMarkd
 
   def self.to_html(string : String)
     string = string.gsub @@regex, ""
+    string = string.gsub /\A^---\n^---/m, ""
     return Markd.to_html string
   end
 end
